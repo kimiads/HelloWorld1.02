@@ -10,8 +10,13 @@ public class HomeController {
     @RequestMapping("/")
     public String homepage(Model model){
         model.addAttribute("myvar", "Say hello to the people.");
-        return "hometemplate";
-    }
+        return "hometemplate";}
+
+        @RequestMapping("/next")
+    public String nextpage(Model model){
+        model.addAttribute("myvar2", "The high temperature is 90 degrees.");
+        return "nextpage";
+        }
 }
 
 
